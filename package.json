@@ -1,0 +1,70 @@
+{
+  "name": "mmdb2json",
+  "version": "0.0.1",
+  "description": "A simple code and command-line utils to convert mmdb to json",
+  "author": "Sviatoslav H",
+  "license": "MIT",
+  "homepage": "https://github.com/svtslv/mmdb2json",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/svtslv/mmdb2json"
+  },
+  "keywords": [
+    "maxmind",
+    "geoip2",
+    "mmdb",
+    "json",
+    "converter"
+  ],
+  "files": [
+    "dist"
+  ],
+  "bin": {
+    "mmdb2json": "./dist/mmdb2json.cli.js"
+  },
+  "preferGlobal": true,
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.build.json",
+    "format": "prettier --write \"**/*.ts\"",
+    "lint": "eslint 'lib/**/*.ts' --fix",
+    "test": "jest --config ./test/jest.config.json --runInBand",
+    "prepublish:npm": "npm run build",
+    "publish:npm": "npm publish --access public",
+    "prepublish:next": "npm run build",
+    "publish:next": "npm publish --access public --tag next",
+    "prerelease": "npm run build",
+    "release": "release-it"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.2",
+    "@types/jest": "25.1.2",
+    "@types/netmask": "^1.0.30",
+    "@types/node": "^13.1.6",
+    "@types/optimist": "0.0.29",
+    "@types/supertest": "^2.0.8",
+    "@typescript-eslint/eslint-plugin": "^2.12.0",
+    "@typescript-eslint/parser": "^2.12.0",
+    "eslint": "^6.7.2",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-import": "^2.19.1",
+    "geolite2": "^3.0.0",
+    "jest": "^25.1.0",
+    "prettier": "^1.18.2",
+    "reflect-metadata": "^0.1.13",
+    "release-it": "^13.0.2",
+    "supertest": "^4.0.2",
+    "ts-jest": "25.2.0",
+    "ts-loader": "^6.2.1",
+    "ts-node": "^8.6.0",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^3.7.4"
+  },
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "figlet": "^1.3.0",
+    "maxmind": "^4.1.1",
+    "netmask": "^1.0.6",
+    "optimist": "^0.6.1"
+  }
+}
