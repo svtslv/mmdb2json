@@ -4,9 +4,10 @@ import * as fs from 'fs';
 import { join, basename } from 'path';
 import * as chalk from 'chalk';
 import * as figlet from 'figlet';
-import { argv } from 'optimist';
+import * as minimist from 'minimist';
 import { Mmdb2Json } from './mmdb2json.lib';
 
+const argv = minimist(process.argv.slice(2));
 console.log(chalk.green(figlet.textSync('mmdb2json', { horizontalLayout: 'full' })));
 console.log(chalk.green(`Homepage: ${ require('../package.json').homepage }`));
 console.log(chalk.green(`Run with --help to print help\n`));
