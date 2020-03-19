@@ -1,6 +1,6 @@
 {
   "name": "mmdb2json",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "A simple code and command-line utils to convert mmdb to json",
   "author": "Sviatoslav H",
   "license": "MIT",
