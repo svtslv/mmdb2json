@@ -32,7 +32,7 @@ if (argv.version) {
 }
 
 const input = argv.input || join(process.cwd(), 'GeoLite2-City.mmdb');
-const output = argv.output || join(process.cwd(), basename(input) || 'GeoLite2-City.json');
+const output = argv.output || join(process.cwd(), basename(input) ? basename(input) + '.json' : 'GeoLite2-City.json');
 
 // 'node_modules/geolite2/dbs/GeoLite2-City.mmdb'
 console.log('Wait...');
