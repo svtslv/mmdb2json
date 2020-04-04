@@ -1,6 +1,6 @@
 {
   "name": "mmdb2json",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple code and command-line utils to convert mmdb to json",
   "author": "Sviatoslav H",
   "license": "MIT",
@@ -17,7 +17,9 @@
     "converter"
   ],
   "files": [
-    "dist"
+    "dist",
+    "index.js",
+    "index.d.ts"
   ],
   "bin": {
     "mmdb2json": "./dist/mmdb2json.cli.js"
@@ -49,7 +51,7 @@
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-import": "^2.20.1",
-    "geolite2": "^3.0.0",
+    "geoip2-cli": "^1.0.0",
     "jest": "^25.1.0",
     "prettier": "^1.19.1",
     "reflect-metadata": "^0.1.13",
